@@ -84,22 +84,7 @@ void variableDeclarations()
     unsigned int three = 3;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-    ignoreUnused(age);
-    ignoreUnused(money);
-    ignoreUnused(amountOfCars);
-    ignoreUnused(right);
-    ignoreUnused(matkatMakesGoodVideos);
-    ignoreUnused(lvlUpProgramming);
-    ignoreUnused(mathGrade);
-    ignoreUnused(sportGrade);
-    ignoreUnused(scienceGrade);
-    ignoreUnused(numberFour);
-    ignoreUnused(numberFive);
-    ignoreUnused(numberSix);
-    ignoreUnused(one);
-    ignoreUnused(two);
-    ignoreUnused(three);
+    ignoreUnused(number, age, money, amountOfCars, right, matkatMakesGoodVideos, lvlUpProgramming, mathGrade, sportGrade, scienceGrade, numberFour, numberFive, numberSix, one, two, three); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -116,42 +101,91 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+bool buyACar(int price = 50000, bool used)
+{
+    ignoreUnused(price, used);
+    return {};
+}
 
 /*
  2)
  */
+int openFrontDoor(bool gotTheKey , int amountOfLocks)
+{
+    ignoreUnused(gotTheKey, amountOfLocks);
+    return {};
+}
 
 /*
  3)
  */
+float flyToBerlin(int ticketPrice, int flightNumber, int seats = 3)
+{
+    ignoreUnused(ticketPrice, flightNumber, seats);
+    return {};
+}
 
 /*
  4)
  */
+bool swimInSee(bool speedosOn = true, int sunScreen)
+{
+    ignoreUnused(speedosOn, sunScreen);
+    return {};
+}
 
 /*
  5)
  */
+void makeCoffee(int coffeeType, bool milk)
+{
+    ignoreUnused(coffeeType, milk);
+}
 
 /*
  6)
  */
+void washHair(int waterTemp = 38, bool blowDryer)
+{
+    ignoreUnused(coffeeType, blowDryer);
+}
 
 /*
  7)
  */
+int goToSleep(bool teethBrushed, bool tired)
+{
+    ignoreUnused(teethBrushed, tired);
+    return {};
+}
 
 /*
  8)
  */
+int cookDinner(int ingredients = 20, int cookingDuration)
+{
+    ignoreUnused(ingredients, cookingDuration);
+    return {};
+}
 
 /*
  9)
  */
+int writingFunctions(int dataType, int parameters)
+{
+    ignoreUnused(dataType, parameters);
+    return {};
+}
 
 /*
  10)
  */
+int learningProgramming(int duration, bool withMatkat = true)
+{
+    ignoreUnused(duration, withMatkat);
+    return {};
+}
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -173,27 +207,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto carBought = buyACar(100000, false);
+
     //2)
-    
+    auto doorOpen = openFrontDoor(true , 4);
+
     //3)
-    
+    auto ticketsBought = flyToBerlin(100, 12345, 3);
+
     //4)
-    
+    auto swim = swimInSee(true, 30);
+
     //5)
-    
+    makeCoffee(2, true);
+
     //6)
-    
+    washHair(40, false);
+
     //7)
-    
+    auto closeEyes = goToSleep(true, true);
+
     //8)
-    
+    auto whatToEat = cookDinner(50, 20);
+
     //9)
-    
+    auto functionWritten = writingFunctions(1, 2);
+
     //10)
+    auto programming = learningProgramming(30, true);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, carBought, doorOpen, ticketsBought, swim, closeEyes, whatToEat, functionWritten, programming);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }

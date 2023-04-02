@@ -84,7 +84,7 @@ void variableDeclarations()
     unsigned int three = 3;
 
     
-    ignoreUnused(number, age, money, amountOfCars, right, matkatMakesGoodVideos, lvlUpProgramming, mathGrade, sportGrade, scienceGrade, numberFour, numberFive, numberSix, one, two, three); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, age, money, amountOfCars, right, matkatMakesGoodVideos, lvlUpProgramming, mathGrade, sportGrade, numberOne, numberTwo, numberThree, scienceGrade, numberFour, numberFive, numberSix, one, two, three); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -101,7 +101,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-bool buyACar(int price = 50000, bool used)
+bool buyACar(int price = 50000, bool used = true)
 {
     ignoreUnused(price, used);
     return {};
@@ -128,7 +128,7 @@ float flyToBerlin(int ticketPrice, int flightNumber, int seats = 3)
 /*
  4)
  */
-bool swimInSee(bool speedosOn = true, int sunScreen)
+bool swimInSee(bool speedosOn, int sunScreen = 30)
 {
     ignoreUnused(speedosOn, sunScreen);
     return {};
@@ -145,9 +145,9 @@ void makeCoffee(int coffeeType, bool milk)
 /*
  6)
  */
-void washHair(int waterTemp = 38, bool blowDryer)
+void washHair(int waterTemp, bool blowDryer = false)
 {
-    ignoreUnused(coffeeType, blowDryer);
+    ignoreUnused(waterTemp, blowDryer);
 }
 
 /*
@@ -162,7 +162,7 @@ int goToSleep(bool teethBrushed, bool tired)
 /*
  8)
  */
-int cookDinner(int ingredients = 20, int cookingDuration)
+int cookDinner(int ingredients = 20, int cookingDuration = 60)
 {
     ignoreUnused(ingredients, cookingDuration);
     return {};

@@ -16,14 +16,14 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
+int 
+bool  
+char
+double 
+float 
+unsigned int
  
- 
- 
- 
- 
- 
- 
- 
+
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -64,10 +64,27 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int age = 25;
+    int money = 1000;
+    int amountOfCars = 100;
+    bool right = true;
+    bool matkatMakesGoodVideos = true;
+    bool lvlUpProgramming = true;
+    char mathGrade = 'A';
+    char sportGrade = 'A';
+    char scienceGrade = 'A';
+    double numberOne = 1.0;
+    double numberTwo = 2.0;
+    double numberThree = 3.0;
+    float numberFour = 4.0f;
+    float numberFive = 5.0f;
+    float numberSix = 6.0f;
+    unsigned int one = 1;
+    unsigned int two = 2;
+    unsigned int three = 3;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, age, money, amountOfCars, right, matkatMakesGoodVideos, lvlUpProgramming, mathGrade, sportGrade, numberOne, numberTwo, numberThree, scienceGrade, numberFour, numberFive, numberSix, one, two, three); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,42 +101,91 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+bool buyACar(int price = 50000, bool used = true)
+{
+    ignoreUnused(price, used);
+    return {};
+}
 
 /*
  2)
  */
+int openFrontDoor(bool gotTheKey , int amountOfLocks)
+{
+    ignoreUnused(gotTheKey, amountOfLocks);
+    return {};
+}
 
 /*
  3)
  */
+float flyToBerlin(int ticketPrice, int flightNumber, int seats = 3)
+{
+    ignoreUnused(ticketPrice, flightNumber, seats);
+    return {};
+}
 
 /*
  4)
  */
+bool swimInSee(bool speedosOn, int sunScreen = 30)
+{
+    ignoreUnused(speedosOn, sunScreen);
+    return {};
+}
 
 /*
  5)
  */
+void makeCoffee(int coffeeType, bool milk)
+{
+    ignoreUnused(coffeeType, milk);
+}
 
 /*
  6)
  */
+void washHair(int waterTemp, bool blowDryer = false)
+{
+    ignoreUnused(waterTemp, blowDryer);
+}
 
 /*
  7)
  */
+int goToSleep(bool teethBrushed, bool tired)
+{
+    ignoreUnused(teethBrushed, tired);
+    return {};
+}
 
 /*
  8)
  */
+int cookDinner(int ingredients = 20, int cookingDuration = 60)
+{
+    ignoreUnused(ingredients, cookingDuration);
+    return {};
+}
 
 /*
  9)
  */
+int writeFunctions(int dataType, int parameters)
+{
+    ignoreUnused(dataType, parameters);
+    return {};
+}
 
 /*
  10)
  */
+int learnProgramming(int duration, bool withMatkat = true)
+{
+    ignoreUnused(duration, withMatkat);
+    return {};
+}
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +207,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto carBought = buyACar(100000, false);
+
     //2)
-    
+    auto doorOpen = openFrontDoor(true , 4);
+
     //3)
-    
+    auto ticketsBought = flyToBerlin(100, 12345, 3);
+
     //4)
-    
+    auto swim = swimInSee(true, 30);
+
     //5)
-    
+    makeCoffee(2, true);
+
     //6)
-    
+    washHair(40, false);
+
     //7)
-    
+    auto closeEyes = goToSleep(true, true);
+
     //8)
-    
+    auto whatToEat = cookDinner(50, 20);
+
     //9)
-    
+    auto functionWritten = writeFunctions(1, 2);
+
     //10)
+    auto programming = learnProgramming(30, true);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, carBought, doorOpen, ticketsBought, swim, closeEyes, whatToEat, functionWritten, programming);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }

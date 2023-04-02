@@ -171,7 +171,7 @@ int cookDinner(int ingredients = 20, int cookingDuration)
 /*
  9)
  */
-int writingFunctions(int dataType, int parameters)
+int writeFunctions(int dataType, int parameters)
 {
     ignoreUnused(dataType, parameters);
     return {};
@@ -180,7 +180,7 @@ int writingFunctions(int dataType, int parameters)
 /*
  10)
  */
-int learningProgramming(int duration, bool withMatkat = true)
+int learnProgramming(int duration, bool withMatkat = true)
 {
     ignoreUnused(duration, withMatkat);
     return {};

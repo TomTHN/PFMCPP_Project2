@@ -231,10 +231,10 @@ int main()
     auto whatToEat = cookDinner(50, 20);
 
     //9)
-    auto functionWritten = writingFunctions(1, 2);
+    auto functionWritten = writeFunctions(1, 2);
 
     //10)
-    auto programming = learningProgramming(30, true);
+    auto programming = learnProgramming(30, true);
     
     ignoreUnused(carRented, carBought, doorOpen, ticketsBought, swim, closeEyes, whatToEat, functionWritten, programming);
 
